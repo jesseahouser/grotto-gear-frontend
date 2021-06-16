@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">GrottoGear</h1>
+
+      <Router>
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/contact">Contact</Link>
+        </nav>
+
+        <Switch>
+          <Route exact path="/">
+            <Home /> 
+          </Route>
+          <Route path="/about">
+            <About /> 
+          </Route>
+          <Route path="/">
+            <Contact /> 
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
-
-export default App;
