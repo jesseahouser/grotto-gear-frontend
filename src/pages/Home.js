@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import GearCollection from '../containers/GearCollection'
 
 const grottoGearAPI = 'http://localhost:9000'
@@ -15,7 +15,8 @@ export default function Home() {
 
   return (
     <div>
-        <GearCollection gears={gears} />
+      <h1 className="title">GrottoGear</h1>
+      <GearCollection gears={gears} />
     </div>
   )
 }
