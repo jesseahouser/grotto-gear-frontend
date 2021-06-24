@@ -63,7 +63,7 @@ export default function SignIn(props) {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h2" variant="h4">
           Sign in
         </Typography>
         <form
